@@ -108,12 +108,12 @@ Type the following command:
 
 	#docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock --network jupyterhub --name jupyterhub -p 8000:8000 hub
 	
-## Usage
+# Usage
 
 If you go to your Debian host you can now access the hub throw your browser via : <atomic_host_machine_ip>:8000
 
 As there is no whiteliste in the config anyone using Bitbucket can log in and use the hub.
 
-## What is left to do
+# What is left to do
 
 - Build our own Dockerfile to implement Go and MariaDB/MongoDB
