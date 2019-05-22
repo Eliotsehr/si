@@ -79,7 +79,7 @@ Once you're done you save the application and you shoul'd see it appearing. By c
 You must write those two strings inside the *jupyterhub_config.py* in the **c.BitbucketOAuthenticator.client_id = '<YOUR_CLIENT_ID>'**
 and **c.BitbucketOAuthenticator.client_secret = '<YOUR_CLIENT_SECRET>'**
 
-Finally write the call back url that you created in the application at **c.BitbucketOAuthenticator.oauth_callback_url = '<YOUR_CALLBACK_URL'**
+Finally write the call back url that you created in the application at **c.BitbucketOAuthenticator.oauth_callback_url = '<YOUR_CALLBACK_URL'>**
 
 **Building the hub**
 
