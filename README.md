@@ -20,9 +20,9 @@ Use JupyterHub to build and deploy a multi-tenant platform for exploratory data 
 
 - [Requirements](#requirements)
 - [Installation](#installation)
-- [Configuration](#configuration)
-- [Start the hub](#start-the-hub)
-- [Using the hub](#using-the-hub)
+- [Building](#building)
+- [Running](#running)
+- [Usage](#usage)
 - [What is left to do](#what-is-left-to-do)
 
 # Requirements
@@ -41,7 +41,7 @@ Once you've installed the two VMs shut them down and for each click on Configura
 Boot the 2 VMS
 
 
-# Configuration
+# Building
 
 **Atomic OS Setup**
 
@@ -96,7 +96,7 @@ We also need the image that jupyterhub is going to use for the single-user serve
 	#docker pull jupyter/datascience-notebook
 	
 	
-# Start the hub
+# Running
 	
 We will start with the following instructions:
 
@@ -108,7 +108,7 @@ Type the following command:
 
 	#docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock --network jupyterhub --name jupyterhub -p 8000:8000 hub
 	
-## Using the hub
+## Usage
 
 If you go to your Debian host you can now access the hub throw your browser via : <atomic_host_machine_ip>:8000
 
