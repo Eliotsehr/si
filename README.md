@@ -32,9 +32,9 @@ Use JupyterHub to build and deploy a multi-tenant platform for exploratory data 
 
 # Installation
 
-We will setup two VMs, on based on AtomicOS and the other one on Debian. As everything is running locally we must make sure that our VMs are on the same virtual network in the VirtualBoxs parameters.
+We will setup two VMs, based on AtomicOS and the other one on Debian. As everything is running locally we must make sure that our VMs are on the same virtual network in the VirtualBoxs parameters.
 
-To setup the VMs network go to File > Parameters > Networks and thenn click on the green cross button on the right.
+To setup the VMs network go to File > Parameters > Networks and then click on the green cross button on the right.
 
 Once you've installed the two VMs shut them down and for each click on Configuration > Network then NAT Network and select the network you created.
 
@@ -55,11 +55,11 @@ Second we will setup the storage for the docker containers:
 
 	#vi /etc/sysconf/docker-storage-setup
 
-Add the following line replaceing X by the amount of storage you want to add:
+Add the following line replacing X by the amount of storage you want to add:
 
 	ROOT_SIZE=XG
 
-Set up the sotrage with the command:
+Set up the storage with the command:
 
 	#docker-storage-setup
 	
@@ -70,11 +70,11 @@ Finally create a directory for the config files:
 
 **Bitbucket setup**
 
-You will need a bitbucket application to make the authentication machanism work. To do so you need to log on your bitbucket account then go to Bitbucket Settings > Oauth > New user
+You will need a bitbucket application to make the authentication mechanism work. To do so you need to log on your bitbucket account then go to Bitbucket Settings > Oauth > New user
 
 Here you fill up the fields and be carefull with the Call back URL it must be: **http://<atomic_host_ip>/hub/oauth_callback**
 
-Once you're done you save the application and you shoul'd see it appearing. By clicking on the arrow on the right you will see your **client_id** and **client_secret**
+Once you're done you save the application and you should see it appearing. By clicking on the arrow on the right you will see your **client_id** and **client_secret**
 
 You must write those two strings inside the *jupyterhub_config.py* in the **c.BitbucketOAuthenticator.client_id = '<YOUR_CLIENT_ID>'**
 and **c.BitbucketOAuthenticator.client_secret = '<YOUR_CLIENT_SECRET>'**
